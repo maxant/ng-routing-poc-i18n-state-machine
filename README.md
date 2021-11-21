@@ -1,8 +1,22 @@
 # NgRoutingPocI18nStateMachine
 
+This is a proof of concept showing how to use a state machine to manage route transitions, with the added complexity of them being internationalised
+(german and french). See primarily `route-transition.guard.ts` and `route-state-machine.ts`.
+
+## Initial Installation
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
 
+Based on https://angular.io/guide/router
+
     ng new ng-routing-poc-i18n-state-machine --routing --defaults
+    ng generate component first
+    ng generate component second
+    ng generate component third
+    ng generate service message
+
+    # create a guard, and select CanActivate:
+    ng generate guard route-transition
 
 ## Development server
 

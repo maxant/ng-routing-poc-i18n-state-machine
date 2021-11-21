@@ -1,0 +1,23 @@
+<table width='100%'>
+  <tr>
+    <td>
+      <!-- previous -->
+      <a *ngIf="isActive('de') && hasPrevious()" routerLink="/{{getPrevious('de')}}"  routerLinkActive="active">&lt; previous</a>
+      <a *ngIf="isActive('fr') && hasPrevious()" routerLink="/{{getPrevious('fr')}}"  routerLinkActive="active">&lt; previous</a>
+      <span *ngIf="!hasPrevious()">&lt; previous</span>
+      &nbsp;
+      <!-- next -->
+      <a *ngIf="isActive('de') && hasNext()" routerLink="/{{getNext('de')}}"  routerLinkActive="active">next &gt;</a>
+      <a *ngIf="isActive('fr') && hasNext()" routerLink="/{{getNext('fr')}}"  routerLinkActive="active">next &gt;</a>
+      <span *ngIf="!hasNext()">next &gt;</span>
+    </td>
+    <td style="text-align: right;">
+      <!-- link to same page in a different language -->
+      <span *ngIf="isActive('de')">DE</span>
+      <a *ngIf="isActive('fr')" routerLink="/{{getLinkForLanguage('de')}}"  routerLinkActive="active">DE</a>
+      &nbsp;
+      <span *ngIf="isActive('fr')">FR</span>
+      <a *ngIf="isActive('de')" routerLink="/{{getLinkForLanguage('fr')}}"  routerLinkActive="active">FR</a>
+    </td>
+  </tr>
+</table>
