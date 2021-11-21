@@ -53,11 +53,11 @@ export class RouteStateMachine {
   }
 
   getStateByComponent(component: any): RouteState | undefined {
-    return ROUTE_STATE_MACHINE.states.find(s => s.component == component)
+    return this.states.find(s => s.component == component)
   }
 
   getStateByName(name: string): RouteState | undefined {
-    return ROUTE_STATE_MACHINE.states.find(s => s.component.name == name)
+    return this.states.find(s => s.component.name == name)
   }
 }
 
