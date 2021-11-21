@@ -2,8 +2,10 @@
 
 This is a proof of concept showing how to use a state machine to manage route transitions, with the added complexity of them being internationalised
 (german and french). See primarily
-[route-transition.guard.ts](./src/app/route-transition.guard.ts) 
 [route-state-machine.ts](./src/app/route-state-machine.ts) 
+and
+[route-transition.guard.ts](./src/app/route-transition.guard.ts) 
+.
 
 ## Initial Installation
 
